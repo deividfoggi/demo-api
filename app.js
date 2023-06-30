@@ -6,7 +6,7 @@ app.get('/', function(req, res) {
   res.send('Hello World!');
 });
 
-app.listen(3000);
+app.listen(80);
 
 // Simple json response to simulate an api
 app.get('/api/devices', function(req, res) {
