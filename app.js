@@ -1,15 +1,15 @@
 // Express server
 var express = require('express');
 var app = express();
+const port = process.env.PORT || 80;
 
 app.get('/', function(req, res) {
   res.send('Hello World!');
 });
 
-app.listen(80);
-
 // Simple json response to simulate an api
 app.get('/api/devices', function(req, res) {
+    console.log('Devices listed');
     var obj = [
         {
             name: 'Device 1',
@@ -28,6 +28,7 @@ app.get('/api/devices', function(req, res) {
 });
 
 app.get('/api/users', function(req, res) {
+    console.log('Users listed');
     var obj = [
         {
             name: 'User 1',
@@ -43,4 +44,9 @@ app.get('/api/users', function(req, res) {
         }
     ];
     res.send(obj);
+});
+
+
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
 });
