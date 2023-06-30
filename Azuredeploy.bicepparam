@@ -1,0 +1,5 @@
+using 'Azuredeploy.bicep'
+param skuString = 'F1'
+param linuxFxVersion = 'node|18-lts'
+param repositoryUrl = 'https://github.com/deividfoggi/demo-api'
+param branch = 'main'
